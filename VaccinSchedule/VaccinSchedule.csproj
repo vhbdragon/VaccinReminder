@@ -160,6 +160,7 @@
     <Compile Include="App_Start\ServiceConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Core\DataFactory.cs" />
     <Compile Include="Core\DataLayer\VaccinReminder.designer.cs">
@@ -168,6 +169,7 @@
       <DependentUpon>VaccinReminder.dbml</DependentUpon>
     </Compile>
     <Compile Include="Core\DataLayer\VaccinReminderDataContext.cs" />
+    <Compile Include="Core\DomainModel\User.cs" />
     <Compile Include="Core\IDataContext.cs" />
     <Compile Include="Core\Services\ISecurityContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -297,6 +299,7 @@
       <LastGenOutput>VaccinReminder.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Home\Manage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

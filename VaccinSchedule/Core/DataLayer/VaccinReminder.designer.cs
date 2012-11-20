@@ -36,9 +36,9 @@ namespace VaccinSchedule.Core.DataLayer
     partial void Insertwebpages_UsersInRole(webpages_UsersInRole instance);
     partial void Updatewebpages_UsersInRole(webpages_UsersInRole instance);
     partial void Deletewebpages_UsersInRole(webpages_UsersInRole instance);
-    partial void Insertaspnet_Membership(aspnet_Membership instance);
-    partial void Updateaspnet_Membership(aspnet_Membership instance);
-    partial void Deleteaspnet_Membership(aspnet_Membership instance);
+    partial void Insertaspnet_securityContext(aspnet_securityContext instance);
+    partial void Updateaspnet_securityContext(aspnet_securityContext instance);
+    partial void Deleteaspnet_securityContext(aspnet_securityContext instance);
     partial void Insertaspnet_Path(aspnet_Path instance);
     partial void Updateaspnet_Path(aspnet_Path instance);
     partial void Deleteaspnet_Path(aspnet_Path instance);
@@ -78,12 +78,12 @@ namespace VaccinSchedule.Core.DataLayer
     partial void InserttblVaccineUser(tblVaccineUser instance);
     partial void UpdatetblVaccineUser(tblVaccineUser instance);
     partial void DeletetblVaccineUser(tblVaccineUser instance);
-    partial void Insertwebpages_Membership(webpages_Membership instance);
-    partial void Updatewebpages_Membership(webpages_Membership instance);
-    partial void Deletewebpages_Membership(webpages_Membership instance);
-    partial void Insertwebpages_OAuthMembership(webpages_OAuthMembership instance);
-    partial void Updatewebpages_OAuthMembership(webpages_OAuthMembership instance);
-    partial void Deletewebpages_OAuthMembership(webpages_OAuthMembership instance);
+    partial void Insertwebpages_securityContext(webpages_securityContext instance);
+    partial void Updatewebpages_securityContext(webpages_securityContext instance);
+    partial void Deletewebpages_securityContext(webpages_securityContext instance);
+    partial void Insertwebpages_OAuthsecurityContext(webpages_OAuthsecurityContext instance);
+    partial void Updatewebpages_OAuthsecurityContext(webpages_OAuthsecurityContext instance);
+    partial void Deletewebpages_OAuthsecurityContext(webpages_OAuthsecurityContext instance);
     partial void Insertwebpages_Role(webpages_Role instance);
     partial void Updatewebpages_Role(webpages_Role instance);
     partial void Deletewebpages_Role(webpages_Role instance);
@@ -135,11 +135,11 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		public System.Data.Linq.Table<aspnet_Membership> aspnet_Memberships
+		public System.Data.Linq.Table<aspnet_securityContext> aspnet_securityContexts
 		{
 			get
 			{
-				return this.GetTable<aspnet_Membership>();
+				return this.GetTable<aspnet_securityContext>();
 			}
 		}
 		
@@ -247,19 +247,19 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		public System.Data.Linq.Table<webpages_Membership> webpages_Memberships
+		public System.Data.Linq.Table<webpages_securityContext> webpages_securityContexts
 		{
 			get
 			{
-				return this.GetTable<webpages_Membership>();
+				return this.GetTable<webpages_securityContext>();
 			}
 		}
 		
-		public System.Data.Linq.Table<webpages_OAuthMembership> webpages_OAuthMemberships
+		public System.Data.Linq.Table<webpages_OAuthsecurityContext> webpages_OAuthsecurityContexts
 		{
 			get
 			{
-				return this.GetTable<webpages_OAuthMembership>();
+				return this.GetTable<webpages_OAuthsecurityContext>();
 			}
 		}
 		
@@ -286,7 +286,7 @@ namespace VaccinSchedule.Core.DataLayer
 		
 		private string _Description;
 		
-		private EntitySet<aspnet_Membership> _aspnet_Memberships;
+		private EntitySet<aspnet_securityContext> _aspnet_securityContexts;
 		
 		private EntitySet<aspnet_Path> _aspnet_Paths;
 		
@@ -310,7 +310,7 @@ namespace VaccinSchedule.Core.DataLayer
 		
 		public aspnet_Application()
 		{
-			this._aspnet_Memberships = new EntitySet<aspnet_Membership>(new Action<aspnet_Membership>(this.attach_aspnet_Memberships), new Action<aspnet_Membership>(this.detach_aspnet_Memberships));
+			this._aspnet_securityContexts = new EntitySet<aspnet_securityContext>(new Action<aspnet_securityContext>(this.attach_aspnet_securityContexts), new Action<aspnet_securityContext>(this.detach_aspnet_securityContexts));
 			this._aspnet_Paths = new EntitySet<aspnet_Path>(new Action<aspnet_Path>(this.attach_aspnet_Paths), new Action<aspnet_Path>(this.detach_aspnet_Paths));
 			this._aspnet_Roles = new EntitySet<aspnet_Role>(new Action<aspnet_Role>(this.attach_aspnet_Roles), new Action<aspnet_Role>(this.detach_aspnet_Roles));
 			this._aspnet_Users = new EntitySet<aspnet_User>(new Action<aspnet_User>(this.attach_aspnet_Users), new Action<aspnet_User>(this.detach_aspnet_Users));
@@ -397,16 +397,16 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_Application_aspnet_Membership", Storage="_aspnet_Memberships", ThisKey="ApplicationId", OtherKey="ApplicationId")]
-		public EntitySet<aspnet_Membership> aspnet_Memberships
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_Application_aspnet_securityContext", Storage="_aspnet_securityContexts", ThisKey="ApplicationId", OtherKey="ApplicationId")]
+		public EntitySet<aspnet_securityContext> aspnet_securityContexts
 		{
 			get
 			{
-				return this._aspnet_Memberships;
+				return this._aspnet_securityContexts;
 			}
 			set
 			{
-				this._aspnet_Memberships.Assign(value);
+				this._aspnet_securityContexts.Assign(value);
 			}
 		}
 		
@@ -469,13 +469,13 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		private void attach_aspnet_Memberships(aspnet_Membership entity)
+		private void attach_aspnet_securityContexts(aspnet_securityContext entity)
 		{
 			this.SendPropertyChanging();
 			entity.aspnet_Application = this;
 		}
 		
-		private void detach_aspnet_Memberships(aspnet_Membership entity)
+		private void detach_aspnet_securityContexts(aspnet_securityContext entity)
 		{
 			this.SendPropertyChanging();
 			entity.aspnet_Application = null;
@@ -645,8 +645,8 @@ namespace VaccinSchedule.Core.DataLayer
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.aspnet_Membership")]
-	public partial class aspnet_Membership : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.aspnet_securityContext")]
+	public partial class aspnet_securityContext : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -745,7 +745,7 @@ namespace VaccinSchedule.Core.DataLayer
     partial void OnCommentChanged();
     #endregion
 		
-		public aspnet_Membership()
+		public aspnet_securityContext()
 		{
 			this._aspnet_Application = default(EntityRef<aspnet_Application>);
 			this._aspnet_User = default(EntityRef<aspnet_User>);
@@ -1180,7 +1180,7 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_Application_aspnet_Membership", Storage="_aspnet_Application", ThisKey="ApplicationId", OtherKey="ApplicationId", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_Application_aspnet_securityContext", Storage="_aspnet_Application", ThisKey="ApplicationId", OtherKey="ApplicationId", IsForeignKey=true)]
 		public aspnet_Application aspnet_Application
 		{
 			get
@@ -1197,12 +1197,12 @@ namespace VaccinSchedule.Core.DataLayer
 					if ((previousValue != null))
 					{
 						this._aspnet_Application.Entity = null;
-						previousValue.aspnet_Memberships.Remove(this);
+						previousValue.aspnet_securityContexts.Remove(this);
 					}
 					this._aspnet_Application.Entity = value;
 					if ((value != null))
 					{
-						value.aspnet_Memberships.Add(this);
+						value.aspnet_securityContexts.Add(this);
 						this._ApplicationId = value.ApplicationId;
 					}
 					else
@@ -1214,7 +1214,7 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_User_aspnet_Membership", Storage="_aspnet_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_User_aspnet_securityContext", Storage="_aspnet_User", ThisKey="UserId", OtherKey="UserId", IsForeignKey=true)]
 		public aspnet_User aspnet_User
 		{
 			get
@@ -1231,12 +1231,12 @@ namespace VaccinSchedule.Core.DataLayer
 					if ((previousValue != null))
 					{
 						this._aspnet_User.Entity = null;
-						previousValue.aspnet_Membership = null;
+						previousValue.aspnet_securityContext = null;
 					}
 					this._aspnet_User.Entity = value;
 					if ((value != null))
 					{
-						value.aspnet_Membership = this;
+						value.aspnet_securityContext = this;
 						this._UserId = value.UserId;
 					}
 					else
@@ -2451,7 +2451,7 @@ namespace VaccinSchedule.Core.DataLayer
 		
 		private System.DateTime _LastActivityDate;
 		
-		private EntityRef<aspnet_Membership> _aspnet_Membership;
+		private EntityRef<aspnet_securityContext> _aspnet_securityContext;
 		
 		private EntitySet<aspnet_PersonalizationPerUser> _aspnet_PersonalizationPerUsers;
 		
@@ -2483,7 +2483,7 @@ namespace VaccinSchedule.Core.DataLayer
 		
 		public aspnet_User()
 		{
-			this._aspnet_Membership = default(EntityRef<aspnet_Membership>);
+			this._aspnet_securityContext = default(EntityRef<aspnet_securityContext>);
 			this._aspnet_PersonalizationPerUsers = new EntitySet<aspnet_PersonalizationPerUser>(new Action<aspnet_PersonalizationPerUser>(this.attach_aspnet_PersonalizationPerUsers), new Action<aspnet_PersonalizationPerUser>(this.detach_aspnet_PersonalizationPerUsers));
 			this._aspnet_Profile = default(EntityRef<aspnet_Profile>);
 			this._aspnet_UsersInRoles = new EntitySet<aspnet_UsersInRole>(new Action<aspnet_UsersInRole>(this.attach_aspnet_UsersInRoles), new Action<aspnet_UsersInRole>(this.detach_aspnet_UsersInRoles));
@@ -2635,31 +2635,31 @@ namespace VaccinSchedule.Core.DataLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_User_aspnet_Membership", Storage="_aspnet_Membership", ThisKey="UserId", OtherKey="UserId", IsUnique=true, IsForeignKey=false)]
-		public aspnet_Membership aspnet_Membership
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="aspnet_User_aspnet_securityContext", Storage="_aspnet_securityContext", ThisKey="UserId", OtherKey="UserId", IsUnique=true, IsForeignKey=false)]
+		public aspnet_securityContext aspnet_securityContext
 		{
 			get
 			{
-				return this._aspnet_Membership.Entity;
+				return this._aspnet_securityContext.Entity;
 			}
 			set
 			{
-				aspnet_Membership previousValue = this._aspnet_Membership.Entity;
+				aspnet_securityContext previousValue = this._aspnet_securityContext.Entity;
 				if (((previousValue != value) 
-							|| (this._aspnet_Membership.HasLoadedOrAssignedValue == false)))
+							|| (this._aspnet_securityContext.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._aspnet_Membership.Entity = null;
+						this._aspnet_securityContext.Entity = null;
 						previousValue.aspnet_User = null;
 					}
-					this._aspnet_Membership.Entity = value;
+					this._aspnet_securityContext.Entity = value;
 					if ((value != null))
 					{
 						value.aspnet_User = this;
 					}
-					this.SendPropertyChanged("aspnet_Membership");
+					this.SendPropertyChanged("aspnet_securityContext");
 				}
 			}
 		}
@@ -4308,8 +4308,8 @@ namespace VaccinSchedule.Core.DataLayer
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.webpages_Membership")]
-	public partial class webpages_Membership : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.webpages_securityContext")]
+	public partial class webpages_securityContext : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -4364,7 +4364,7 @@ namespace VaccinSchedule.Core.DataLayer
     partial void OnPasswordVerificationTokenExpirationDateChanged();
     #endregion
 		
-		public webpages_Membership()
+		public webpages_securityContext()
 		{
 			OnCreated();
 		}
@@ -4610,8 +4610,8 @@ namespace VaccinSchedule.Core.DataLayer
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.webpages_OAuthMembership")]
-	public partial class webpages_OAuthMembership : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.webpages_OAuthsecurityContext")]
+	public partial class webpages_OAuthsecurityContext : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -4634,7 +4634,7 @@ namespace VaccinSchedule.Core.DataLayer
     partial void OnUserIdChanged();
     #endregion
 		
-		public webpages_OAuthMembership()
+		public webpages_OAuthsecurityContext()
 		{
 			OnCreated();
 		}

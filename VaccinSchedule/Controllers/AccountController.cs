@@ -9,43 +9,41 @@ namespace VaccinSchedule.Controllers
 {
 
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
 
         //
         // GET: /Account/Login
 
         [AllowAnonymous]
-        public ActionResult Login()
+        public ActionResult Login(string returnUrl)
         {
-            return ContextDependentView();
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
 
         //
         // POST: /Account/Login
 
-        [AllowAnonymous]
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && securityContext.Login(model.UserName, model.Password, model.RememberMe))
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                if (Url.IsLocalUrl(returnUrl))
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
+                    return Redirect(returnUrl);
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    return RedirectToAction("Manage");
                 }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không chính xác.");
             }
 
             // If we got this far, something failed, redisplay form
@@ -55,9 +53,11 @@ namespace VaccinSchedule.Controllers
         //
         // GET: /Account/LogOff
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            FormsAuthentication.SignOut();
+            securityContext.Logout();
 
             return RedirectToAction("Index", "Home");
         }
@@ -68,30 +68,29 @@ namespace VaccinSchedule.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return ContextDependentView();
+            return View();
         }
 
         //
         // POST: /Account/Register
 
-        [AllowAnonymous]
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
                 // Attempt to register the user
-                MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, passwordQuestion: null, passwordAnswer: null, isApproved: true, providerUserKey: null, status: out createStatus);
-
-                if (createStatus == MembershipCreateStatus.Success)
+                try
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, createPersistentCookie: false);
-                    return RedirectToAction("Index", "Home");
+                    securityContext.CreateUserAndAccount(model.UserName, model.Password);
+                    securityContext.Login(model.UserName, model.Password);
+                    return RedirectToAction("Manage");
                 }
-                else
+                catch (MembershipCreateUserException e)
                 {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
+                    ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
                 }
             }
 
@@ -99,9 +98,14 @@ namespace VaccinSchedule.Controllers
             return View(model);
         }
 
+        public ActionResult Manage()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/ChangePassword
-
+        [ValidateAntiForgeryToken]
         public ActionResult ChangePassword()
         {
             return View();
@@ -111,6 +115,7 @@ namespace VaccinSchedule.Controllers
         // POST: /Account/ChangePassword
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult ChangePassword(ChangePasswordModel model)
         {
             if (ModelState.IsValid)
@@ -121,7 +126,7 @@ namespace VaccinSchedule.Controllers
                 bool changePasswordSucceeded;
                 try
                 {
-                    MembershipUser currentUser = Membership.GetUser(User.Identity.Name, userIsOnline: true);
+                    MembershipUser currentUser = securityContext.GetUser(User.Identity.Name, userIsOnline: true);
                     changePasswordSucceeded = currentUser.ChangePassword(model.OldPassword, model.NewPassword);
                 }
                 catch (Exception)
@@ -149,21 +154,6 @@ namespace VaccinSchedule.Controllers
         public ActionResult ChangePasswordSuccess()
         {
             return View();
-        }
-
-        private ActionResult ContextDependentView()
-        {
-            string actionName = ControllerContext.RouteData.GetRequiredString("action");
-            if (Request.QueryString["content"] != null)
-            {
-                ViewBag.FormAction = "Json" + actionName;
-                return PartialView();
-            }
-            else
-            {
-                ViewBag.FormAction = actionName;
-                return View();
-            }
         }
 
         private IEnumerable<string> GetErrorsFromModelState()
