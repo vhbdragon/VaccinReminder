@@ -1,0 +1,6 @@
+﻿@model VaccinSchedule.Models.JumbotronBlock
+<div class="jumbotron">
+    <h1>@Model.Title</h1>
+    <p class="lead">@Model.Description</p>
+    @Html.ActionLink(@Model.SignInText, "Register", "Account", null, new { Class = "btn btn-large btn-success" })
+</div>

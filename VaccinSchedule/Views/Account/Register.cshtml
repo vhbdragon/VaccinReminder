@@ -1,0 +1,45 @@
+﻿@model VaccinSchedule.Models.RegisterModel
+@{
+    ViewBag.Title = "Đăng ký sử dụng dịch vụ";
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>
+        Vui lòng điền đầy đủ thông tin dưới đây.</h2>
+</hgroup>
+<p class="message-info">
+    Mật khẩu phải dài tối thiểu @Membership.MinRequiredPasswordLength ký tự.
+</p>
+@using (Html.BeginForm((string)ViewBag.FormAction, "Account"))
+{
+    if (ViewData.ModelState.IsValid == false)
+    {
+        <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">
+                ×</button>
+            @Html.ValidationSummary(false, "Đăng ký chưa thành công! Hãy kiểm tra và thử lại.")
+        </div>
+    }
+
+    <fieldset>
+        <legend>Mẫu đăng ý</legend>
+        <div class="control-group @if (!ViewData.ModelState.IsValidField("UserName")){ @Html.Raw("error");}">
+            @Html.LabelFor(m => m.UserName)
+            @Html.TextBoxFor(m => m.UserName)
+        </div>
+        <div class="control-group @if (!ViewData.ModelState.IsValidField("Email")){ @Html.Raw("error");}">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+        </div>
+        <div class="control-group @if (!ViewData.ModelState.IsValidField("Password")){ @Html.Raw("error");}">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+        </div>
+        <div class="control-group @if (!ViewData.ModelState.IsValidField("ConfirmPassword")){ @Html.Raw("error");}">
+            @Html.LabelFor(m => m.ConfirmPassword)
+            @Html.PasswordFor(m => m.ConfirmPassword)
+        </div>
+
+        <p><input type="submit" value="Đăng ký" class="btn btn-success" /></p>
+    </fieldset>
+}

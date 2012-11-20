@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Html.Partial("JumbotronBlock", new VaccinSchedule.Models.JumbotronBlock()
+        {
+            Title = "Bạn không cần phải lo lắng nữa!",
+            Description = "Chúng tôi sẽ giúp bạn quản lý lịch tiêm chủng của con.",
+            SignInText = "Đăng ký ngay hôm nay"
+        })
+<hr />
+<div class="row-fluid marketing">
+    @Html.Partial("TeaserBlock", new VaccinSchedule.Models.TeaserBlock()
+            {
+                Title = "Quản lý lịch tiêm chủng",
+                Description =
+                    @"Chỉ cần vài thao tác đăng ký và nhập thông tin con,
+                        bạn sẽ yên tâm vì không còn quên lịch tiêm chủng của con nữa"
+            })
+    @Html.Partial("TeaserBlock", new VaccinSchedule.Models.TeaserBlock()
+            {
+                Title = "Hỗ trợ thông báo",
+                Description =
+                    @"Chúng tôi sẽ hỗ trợ bạn với nhiều kênh thông báo:
+                        điện thoại (SMS), thư điện tử (email), yahoo messenger, ... và sẽ còn nhiều nữa."
+            })
+</div>

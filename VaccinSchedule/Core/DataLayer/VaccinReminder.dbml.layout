@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 15" name="VaccinReminder">
+  <DataContextMoniker Name="/VaccinReminderDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aa92af09-67ca-4fb1-afd7-86e8c6a1e554" absoluteBounds="0.75, 7.625, 2, 1.4386783690253893">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8213b4e-7ba7-414c-8241-379bc25de49b" absoluteBounds="0.765, 8.085, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14dc2579-2285-4a1d-b799-97ba2e0fc32e" absoluteBounds="3.5, 0.875, 2, 1.1049544166525207">
+      <DataClassMoniker Name="/VaccinReminderDataContext/webpages_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aadcf7b-241e-4a48-95b7-671311818842" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.54495441665252042" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e33fd492-b41c-4b40-bc5e-8331d26e5f51" absoluteBounds="9.25, 10.5, 2, 4.2753319641947733">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3a12e8e-3b2a-46e3-8007-c85cf9e2f8d9" absoluteBounds="9.265, 10.96, 1.9700000000000002, 3.7153319641947746" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="669b8bd4-9d0e-434f-b519-73a84cf8812b" absoluteBounds="3.5, 5.125, 2, 1.4386783690253893">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_Path" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1c1022b-6d46-4dc6-8c68-4ddb28df2716" absoluteBounds="3.515, 5.585, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28bf4f7b-e436-4fd7-b078-d88108584261" absoluteBounds="6.25, 5.25, 2, 1.2718163928389554">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_PersonalizationAllUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75aef1b3-529c-4ea0-8d7d-a6defaf7471d" absoluteBounds="6.265, 5.71, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="672b40c4-54a2-42a4-835f-c462e3f2d613" absoluteBounds="9.25, 7.5, 2, 1.605540345211824">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_PersonalizationPerUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afb484d3-15a5-4179-a9f9-d1cd6cc59534" absoluteBounds="9.265, 7.96, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="18bdeac4-bd44-40a3-92a5-b5c4cf99cc45" absoluteBounds="6.25, 9.875, 2, 1.6055403452118249">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2724085f-4379-4de7-806e-c7ec0ffab9dd" absoluteBounds="6.265, 10.335, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9db66d7b-6c28-42c6-8ddb-4dbf926f5380" absoluteBounds="3.5, 7.25, 2, 1.605540345211824">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c2ccda7-ffcc-4161-b6c4-9a7236507717" absoluteBounds="3.515, 7.71, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="343fdf6c-b6ac-4510-8b46-b402e8069fa2" absoluteBounds="0.75, 2.75, 2, 1.2718163928389554">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_SchemaVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08518d6a-cd8b-494f-bf93-107c77af60a0" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7baf4452-c053-422e-984f-aea433f21f7e" absoluteBounds="3.5, 9.625, 2, 1.9392642975846925">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fba6351f-96f2-4911-8f14-79b7e408a4f0" absoluteBounds="3.515, 10.085, 1.9700000000000002, 1.3792642975846925" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7a39937-b077-456a-a538-caff0bd2adec" absoluteBounds="6.25, 7.875, 2, 1.1049544166525216">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3953abdf-db79-4039-a4b6-a6c419631ac0" absoluteBounds="6.265, 8.335, 1.9700000000000002, 0.54495441665252042" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b1fe6ad-85fd-4247-b819-fe7b3043a9c2" absoluteBounds="6.75, 0.75, 2, 3.2741601070761686">
+      <DataClassMoniker Name="/VaccinReminderDataContext/aspnet_WebEvent_Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7363d2b2-b6d5-4435-9516-5b081681199f" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.7141601070761681" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2de6935-ec93-4e95-903d-afa5b3c25b00" absoluteBounds="9.75, 0.75, 2, 2.4398502261439958">
+      <DataClassMoniker Name="/VaccinReminderDataContext/tblReminderToday" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2b0317d-84f8-4991-901c-44b90e515d00" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.8798502261439958" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63b1178b-3319-436f-8128-e2aa41d3678d" absoluteBounds="11.75, 4.75, 2, 2.1061262737711282">
+      <DataClassMoniker Name="/VaccinReminderDataContext/tblVaccine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62867a9e-c880-4241-aa0e-2c22e2197bae" absoluteBounds="11.765, 5.21, 1.9700000000000002, 1.5461262737711272" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2659fe69-09b3-4a15-b848-7d027d2779ad" absoluteBounds="11.75, 7.75, 2, 1.605540345211824">
+      <DataClassMoniker Name="/VaccinReminderDataContext/tblVaccineType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b2e71a7-7068-44b0-a1e1-63a6354dc372" absoluteBounds="11.765, 8.21, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47c9866e-9e85-4615-b7ef-958d4b38fef9" absoluteBounds="11.75, 10.75, 2, 2.4398502261439958">
+      <DataClassMoniker Name="/VaccinReminderDataContext/tblVaccineUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abf006c2-0ce1-4fb2-ad33-7170c38dcaf9" absoluteBounds="11.765, 11.21, 1.9700000000000002, 1.8798502261439958" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bfdcbba-7059-4238-9446-ee2780ec5fe8" absoluteBounds="12.75, 0.75, 2, 2.6067122023304297">
+      <DataClassMoniker Name="/VaccinReminderDataContext/webpages_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b885ac4e-cab3-4620-8290-17f7d056b5ac" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.04671220233043" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37b540ed-6f19-4a7f-81ee-754c3a95d135" absoluteBounds="0.75, 12.75, 2, 1.2718163928389537">
+      <DataClassMoniker Name="/VaccinReminderDataContext/webpages_OAuthMembership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="174c0659-565e-45cd-ad05-290d42ebf433" absoluteBounds="0.765, 13.21, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6fc33dc-3bff-4721-8981-f8575f4b9d02" absoluteBounds="0.75, 0.875, 2, 1.1049544166525207">
+      <DataClassMoniker Name="/VaccinReminderDataContext/webpages_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e0b563f-6030-4787-8381-ece1418caad0" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.54495441665252042" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.06257069335691); (3.125 : 9.43757069335691); (3.125 : 13.2010476308897); (9.25 : 13.2010476308897)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="aa92af09-67ca-4fb1-afd7-86e8c6a1e554" />
+        <classShapeMoniker Id="e33fd492-b41c-4b40-bc5e-8331d26e5f51" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.625); (1.75 : 5.84433918451269); (3.5 : 5.84433918451269)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Application/aspnet_Application_aspnet_Path" />
+      <nodes>
+        <classShapeMoniker Id="aa92af09-67ca-4fb1-afd7-86e8c6a1e554" />
+        <classShapeMoniker Id="669b8bd4-9d0e-434f-b519-73a84cf8812b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.88590819641948); (6.25 : 5.88590819641948)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationAllUser" />
+      <nodes>
+        <classShapeMoniker Id="669b8bd4-9d0e-434f-b519-73a84cf8812b" />
+        <classShapeMoniker Id="28bf4f7b-e436-4fd7-b078-d88108584261" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.15625); (10.25 : 5.15625); (10.25 : 7.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="669b8bd4-9d0e-434f-b519-73a84cf8812b" />
+        <classShapeMoniker Id="672b40c4-54a2-42a4-835f-c462e3f2d613" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.24027017260591); (3.5 : 8.24027017260591)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Application/aspnet_Application_aspnet_Role" />
+      <nodes>
+        <classShapeMoniker Id="aa92af09-67ca-4fb1-afd7-86e8c6a1e554" />
+        <classShapeMoniker Id="9db66d7b-6c28-42c6-8ddb-4dbf926f5380" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.71875); (10.25 : 9.71875); (10.25 : 10.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="7baf4452-c053-422e-984f-aea433f21f7e" />
+        <classShapeMoniker Id="e33fd492-b41c-4b40-bc5e-8331d26e5f51" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.71897873134449); (6.1875 : 9.03147873134449); (6.1875 : 9.48054034521182); (8.875 : 9.48054034521182); (9.25 : 9.10554034521182)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_User/aspnet_User_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="7baf4452-c053-422e-984f-aea433f21f7e" />
+        <classShapeMoniker Id="672b40c4-54a2-42a4-835f-c462e3f2d613" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.6777701726059); (6.25 : 10.6777701726059)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_User/aspnet_User_aspnet_Profile" />
+      <nodes>
+        <classShapeMoniker Id="7baf4452-c053-422e-984f-aea433f21f7e" />
+        <classShapeMoniker Id="18bdeac4-bd44-40a3-92a5-b5c4cf99cc45" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 9.06367836902539); (1.75 : 10.5946321487923); (3.04166666666667 : 10.5946321487923 : JumpStart); (3.20833333333333 : 10.5946321487923 : JumpEnd); (3.5 : 10.5946321487923)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="aa92af09-67ca-4fb1-afd7-86e8c6a1e554" />
+        <classShapeMoniker Id="7baf4452-c053-422e-984f-aea433f21f7e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.36527017260591); (6.25 : 8.36527017260591)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_Role/aspnet_Role_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="9db66d7b-6c28-42c6-8ddb-4dbf926f5380" />
+        <classShapeMoniker Id="c7a39937-b077-456a-a538-caff0bd2adec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46867342288517 : 9.625); (5.875 : 9.21867342288517); (5.875 : 9.35580338158841); (6.25084896493589 : 8.97995441665252)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VaccinReminderDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="7baf4452-c053-422e-984f-aea433f21f7e" />
+        <classShapeMoniker Id="c7a39937-b077-456a-a538-caff0bd2adec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.42747720832626); (3.5 : 1.42747720832626)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VaccinReminderDataContext/webpages_Role/webpages_Role_webpages_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="a6fc33dc-3bff-4721-8981-f8575f4b9d02" />
+        <classShapeMoniker Id="14dc2579-2285-4a1d-b799-97ba2e0fc32e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

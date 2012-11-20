@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccinSchedule", "VaccinSchedule\VaccinSchedule.csproj", "{FF78426E-78D6-48DA-B25B-10B29E4A0364}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF78426E-78D6-48DA-B25B-10B29E4A0364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF78426E-78D6-48DA-B25B-10B29E4A0364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF78426E-78D6-48DA-B25B-10B29E4A0364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF78426E-78D6-48DA-B25B-10B29E4A0364}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
